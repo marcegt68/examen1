@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//alert("jquery funcionando......");
+
+
+
+		$("#btnSumar").click(function(){
+			
+		var n1=parseInt($("#num1").val());
+		var n2=parseInt($("#num2").val());
+		var suma=n1+n2;
+		$("#resultado").val(suma);
+		;
+
+		});
+
+
+		$("#btnRestar").click(function(){
+			
+		var n1=parseInt($("#num1").val());
+		var n2=parseInt($("#num2").val());
+		var R=n1-n2;
+		$("#resultado").val(R);
+		;
+
+		});
+
+		$("#btnMultiplicar").click(function(){
+			
+		var n1=parseInt($("#num1").val());
+		var n2=parseInt($("#num2").val());
+		var R1=n1*n2;
+		$("#resultado").val(R1);
+		;
+
+		});
+
+
+		$("#btnDividir").click(function(){
+			
+		var n1=parseInt($("#num1").val());
+		var n2=parseInt($("#num2").val());
+		var R2=n1/n2;
+		$("#resultado").val(R2);
+		;
+
+		});
+
+
+		$("#btnFactorial").click(function(){
+
+
+			var n1=parseInt($("#N").val());
+            var res=1;
+			for (var i = n1; i>1; i--) {
+				res=res*i;
+			}return $("#RF").val(res);
+		
+				;
+
+		});
+
+	});
+	</script>
+	<style type="text/css">
+		p{
+			text-align:  center;
+		}
+		/*div{
+			background-color: pink; 
+		}*/
+		#Principal{
+			background-color: gray; 
+		}
+		#Contacto{
+			background-color: gray ; 
+		}
+		#OpBasicas{
+			background-color: gray; 
+		}
+		#Factorial{
+			background-color: gray; 
+		}
+		.colorAmarillo{
+			color: blue;
+			font-size: 20px; 
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="Principal" data-theme="a">
+		<div data-role="header">
+		<a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+		<a href="#Contacto" class="ui-btn ui-icon-search ui-btn-icon-top">Buscar</a>
+
+			<p class="colorAmarillo">EXAMEN: PRIMER PARCIAL</p>
+		</div>	
+		<div data-role="content">
+
+		<a href="#OpBasicas" data-role="button" data-transition="slide"> OPERACIONES BÁSICAS</a>
+
+		<a href="#Factorial" data-role="button" data-transition="slideup">OBTENER FACTORIAL</a>
+
+		<a href="#Contacto" data-role="button" data-transition="turn">DATOS DEL DESARROLLADOR</a>
+
+			
+		</div>
+		<div data-role="footer">
+		<p><a href="http://facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Facebook</a>
+		<a href="http://twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Twitter</a>
+		<a href="http://instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Instagram</a>
+
+			</p>
+		</div>
+	</div>
+
+
+
+	<div data-role="page" id="Contacto">
+		<div data-role="header">
+			<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+			<p class="colorAmarillo">DATOS DEL DESARROLLADOR</p>
+		</div>	
+		<div data-role="content">
+			<p class="colorAmarillo">INGENIERÍA SISTEMAS COMPUTACIONALES</p>
+			<p class="colorAmarillo">BASE DE DATOS PARA DISPOSITIVOS MÓVILES</p>
+			<p class="colorAmarillo">Marcelino Guzmán Trinidad</p>
+			<p class="colorAmarillo">No control: 13940060*</p>
+			<p class="colorAmarillo">Tel: 249 163 4814</p>
+			<p class="colorAmarillo">marce88gt@gmail.com</p>
+		</div>
+		<div data-role="footer">
+			<p class="colorAmarillo">8 B</p>
+		</div>
+	</div>	
+
+	
+
+	<div data-role="page" id="OpBasicas">
+		<!--div data-role="header">
+			<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-bottom">Home</a>
+			<p>Sumar dos numeros</p>
+		</div-->	
+		<div data-role="header">
+		<div data-role="navbar">
+		<ul>
+		<li>
+       
+
+		<a  href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+		<li><a href="#Contacto" class="ui-btn ui-icon-plus ui-btn-icon-top">Contacto</a></li>
+		<li><a  href="#http://www.google.com" class="ui-btn ui-icon-search ui-btn-icon-top">Buscar</a></li>
+		</ul>
+		</div>
+		</div>
+		<div data-role="content">
+			<input type="text" id="num1" placeholder="Escribe un número">
+
+			<input type="text" id="num2" placeholder="Escribe un  segundo número">
+
+			<input type="text" id="resultado" placeholder="Resultado">
+
+			<input type="button" id="btnSumar" value="SUMAR">
+
+			<input type="button" id="btnRestar" value="RESTAR">
+
+			<input type="button" id="btnMultiplicar" value="MULTIPLICAR">
+
+			<input type="button" id="btnDividir" value="DIVIDIR">
+
+
+
+
+		</div>
+		<div data-role="footer">
+			<p>ISC 8 B</p>
+		</div>
+	</div>	
+
+
+
+	<div data-role="page" id="Factorial">
+		<!--div data-role="header">
+			<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-bottom">Home</a>
+			<p>Sumar dos numeros</p>
+		</div-->	
+		<div data-role="header">
+		<div data-role="navbar">
+		<ul>
+		<li><a class="ui-btn ui-icon-home ui-btn-icon-top" href="#Principal">Home</a></li>
+		<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="#Contacto">Contacto</a></li>
+		<li><a class="ui-btn ui-icon-search ui-btn-icon-top" href="#http://www.google.com">Buscar</a></li>
+		</ul>
+		</div>
+		</div>
+		<div data-role="content">
+			<input type="text" id="N" placeholder="Escribe un número">
+
+			<input type="text" id="RF" placeholder="Resultado">
+
+			<input type="button" id="btnFactorial" value="Calcular Factorial">
+
+			
+
+
+
+		</div>
+		<div data-role="footer">
+			<p>ISC 8 B</p>
+		</div>
+	</div>	
+</body>
+</html>
